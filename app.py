@@ -38,7 +38,7 @@ with st.container():
                 background-color: #fcd7ed;
                 padding: 8px 10px;
                 border-radius: 10px;
-                padding-right: 16px !important;
+                padding-right: 8px !important;
 
             }
             @media (max-width: 600px) {
