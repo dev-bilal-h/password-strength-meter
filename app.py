@@ -13,7 +13,7 @@ def get_base64_image(image_path):
         return base64.b64encode(img_file.read()).decode()
 
 
-image_base64 = get_base64_image("background.png") 
+image_base64 = get_base64_image("theme-bg.png") 
 st.markdown(
     f"""
     <style>
@@ -35,7 +35,7 @@ with st.container():
         """
         <style>
             div[data-testid="stVerticalBlock"] {
-                background-color: #fcd7ed;
+                background-color: #cae7f8;
                 padding: 8px 10px;
                 border-radius: 10px;
                 padding-right: 5px !important;
@@ -57,20 +57,20 @@ with st.container():
         <style>
             /* password input background color */
             .stTextInput input {
-                background-color: #f7c5e6 !important; 
-                color: #333 !important; 
+                background-color: #c5dff7 !important; 
+                color: #000000 !important; 
                 border-radius: 5px;
                 padding: 8px;
-                border: 2px solid #ec78de;  
+                border: 2px solid #2fa0ec;  
             }
 
             /* number input background color */
             .stNumberInput input {
-                background-color: #f7c5e6 !important;
-                color: #333 !important; 
+                background-color: #c5dff7 !important;
+                color: #000000 !important; 
                 border-radius: 5px;
                 padding: 8px;
-                border: 10px solid #ec78de;  
+                border: 10px solid #2fa0ec;  
             }
         </style>
     """, unsafe_allow_html=True)
@@ -148,7 +148,7 @@ with st.container():
                 text-align: center;
                 font-size: 45px !important; 
                 text-transform: uppercase;
-                background: linear-gradient(-45deg, rgb(255, 20, 147), rgb(255, 105, 180), rgb(255, 67, 95), rgb(219, 112, 147), rgb(255, 0, 127));
+                background: linear-gradient(-45deg,#0084ff, #33b4ff, #6bbcff, #00b7ff, #00a2ff);
                 background-size: 300% 300%;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -179,7 +179,7 @@ with st.container():
             .custom-text {
                 font-style: italic;
                 text-align: center;
-                color: #333333;
+                color: #000000;
                 font-size: 18px !important; 
             }
 
@@ -221,7 +221,7 @@ with st.container():
             padding: 10px 5vw;  
             border: none;
             border-radius: 8px;
-            background: linear-gradient(45deg, #ff00cc, #ff33c9, #ff6bcb, #ff00a6, #ff00b7);
+            background: linear-gradient(45deg, #0084ff, #33b4ff, #6bbcff, #00b7ff, #00a2ff);
             background-size: 300% 300%;
             color: white !important;
             cursor: pointer;
@@ -249,8 +249,8 @@ with st.container():
         
         /* Custom styling for success message */
         .stSuccess {
-            background-color: #d4edda; 
-            color: #1a7555;  
+            background-color: #ebd4ed; 
+            color: #751a44;  
             padding: 6px;
             border-radius: 5px;
             font-size: 1.2em;
@@ -299,7 +299,7 @@ with st.container():
             if password:
                 strength, feedback = check_password_strength(password)
                 if strength == "Strong":
-                    st.markdown(f'<div class="stSuccess"><strong> ✔ Password Strength {strength}- Successfully Created</strong></div>', unsafe_allow_html=True)
+                    st.markdown(f'<div class="stSuccess"><strong> ✔  Your Password is {strength} - Successfully Created</strong></div>', unsafe_allow_html=True)
                 else:
                     st.warning(f"**Password Strength: {strength}**")
                     for suggestion in feedback:
@@ -322,7 +322,7 @@ with st.container():
                 margin-top: 25px !important;
                 font-size: 24px !important; 
                 text-transform: uppercase;
-                background: linear-gradient(-45deg, rgb(255, 20, 147), rgb(255, 105, 180), rgb(255, 67, 95), rgb(219, 112, 147), rgb(255, 0, 127));
+                background: linear-gradient(-45deg, #0084ff, #33b4ff, #6bbcff, #00b7ff, #00a2ff);
                 background-size: 300% 300%;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -339,7 +339,7 @@ with st.container():
         
         <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
         
-        <h1 class="animated-heading2">Automatically Generate a Strong Password</h1>
+        <h1 class="animated-heading2">Generate a strong & Secure password automatically</h1>
     """, unsafe_allow_html=True)
 
     # Number input for password length
@@ -350,7 +350,7 @@ with st.container():
     st.markdown("""
         <style>
             pre {
-                background-color: #c3c8d1 !important;  
+                background-color: #96a1c4 !important;  
                 color: black !important;              
                 border-radius: 5px;                   
                 font-size: 16px !important;           
